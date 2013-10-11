@@ -1,0 +1,13 @@
+site :opscode
+cookbook "yum"
+cookbook "selinux"
+cookbook "iptables"
+cookbook "git"
+cookbook "php"
+cookbook "mysql"
+cookbook "apache2"
+cookbook "memcached"
+cookbook "composer"
+cookbook "nodejs"
+cookbook "phpmyadmin"
+cookbook "webserver", path: "site-cookbooks/webserver"
