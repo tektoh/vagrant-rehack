@@ -30,6 +30,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       "phpmyadmin",
       "composer",
       "nodejs",
+      "i18n",
+      "devtools",
 			"webserver"
     ]
     chef.json = {
