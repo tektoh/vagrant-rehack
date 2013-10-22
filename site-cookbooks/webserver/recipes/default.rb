@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 include_recipe 'apache2::default'
-web_app "webserver" do
+web_app "default" do
   server_name '192.168.33.10'
   server_aliases [node['fqdn'], "my-site.example.com"]
   docroot "/vagrant/htdocs"
