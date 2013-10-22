@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       "nodejs",
       "i18n",
       "devtools",
-			"webserver"
+      "webserver"
     ]
     chef.json = {
       mysql: {
