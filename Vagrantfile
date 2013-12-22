@@ -16,23 +16,24 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.berkshelf.enabled = true
   config.vm.provision :chef_solo do |chef|
     chef.run_list = [
-      "yum::epel",
-      "yum::remi",
+      "yum",
+      "yum-epel",
+      "yum-remi",
       "selinux::disabled",
       "iptables::disabled",
       "git",
       "mysql::server",
       "mysql::client",
-      "php",
       "apache2",
       "apache2::mod_ssl",
       "memcached",
+      "php",
+      "php-extends",
       "phpmyadmin",
-      "composer",
+      "phpmyadmin-alias",
       "nodejs",
       "i18n",
-      "devtools",
-      "webserver"
+      "devtools"
     ]
     chef.json = {
       mysql: {
@@ -44,7 +45,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       phpmyadmin: {
         blowfish_secret: "blowfish_secret",
         fpm: false
-     }
+      }
     }
   end
 end
