@@ -1,4 +1,2 @@
 .vagrant/
 /cookbooks/
-*.lock
-/htdocs/*
